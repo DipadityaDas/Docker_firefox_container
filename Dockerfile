@@ -4,7 +4,8 @@ FROM  centos:latest
 # Generating a universally unique ID for the Container 
 CMD dbus-uuidgen > /etc/machine-id
 
-RUN yum install -y glibc-locale-source && \
+# Installing the sources for the locales
+RUN yum install -y glibc-locale-source
 	localedef --no-archive -i en_US -f UTF-8 en_US.UTF-8 && \
 	export LANG=en_US.UTF-8
 
