@@ -8,7 +8,4 @@ RUN yum install -y glibc-locale-source && \
 
 RUN yum install -y dbus-x11 PackageKit-gtk3-module libcanberra-gtk2 firefox
 
-RUN	yum install firefox -y && \
-	yum
-
-CMD  /usr/bin/firefox
+CMD  ['/usr/bin/firefox']
