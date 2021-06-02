@@ -6,7 +6,9 @@ CMD dbus-uuidgen > /etc/machine-id
 
 # Installing the sources for the locales
 RUN yum install -y glibc-locale-source
-	localedef --no-archive -i en_US -f UTF-8 en_US.UTF-8 && \
+
+# Setting up the default locale to en_US.UTF-8 	
+CMD localedef --no-archive -i en_US -f UTF-8 en_US.UTF-8 && \
 	export LANG=en_US.UTF-8
 
 RUN yum install -y dbus-x11 PackageKit-gtk3-module libcanberra-gtk2 firefox
