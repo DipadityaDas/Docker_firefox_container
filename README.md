@@ -1,1 +1,2 @@
-# Docker_firefox_container
+# Run GUI Application(Firefox) inside a Docker Container
+
