@@ -14,4 +14,5 @@ CMD localedef --no-archive -i en_US -f UTF-8 en_US.UTF-8 && \
 # Installing Necessary packages including firefox
 RUN yum install -y dbus-x11 PackageKit-gtk3-module libcanberra-gtk2 firefox
 
+# Starting Firefox application
 CMD  ['/usr/bin/firefox']
