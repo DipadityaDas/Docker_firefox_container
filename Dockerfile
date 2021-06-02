@@ -1,5 +1,7 @@
+# We are going to use the Latest version of Centos
 FROM  centos:latest
 
+# Generating a universally unique ID for the Container 
 RUN dbus-uuidgen > /etc/machine-id
 
 RUN yum install -y glibc-locale-source && \
